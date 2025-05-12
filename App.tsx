@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import {
   createStackNavigator,
   CardStyleInterpolators,
-} from "@react-navigation/stack"; // 👈 change
+} from "@react-navigation/stack";
 
 import SplashScreen from "./src/screens/SplashScreen";
 import OnBoardingScreen from "./src/screens/OnBoardingScreen";
@@ -41,9 +41,9 @@ export default function App() {
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
-          gestureEnabled: false, // 🔒 Disables swipe back
+          gestureEnabled: false,
           gestureDirection: "horizontal",
-          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS, // 👈 swipe animation
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       >
         <Stack.Screen name="Splash" component={SplashScreen} />
