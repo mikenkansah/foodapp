@@ -56,11 +56,14 @@ const DetailScreen = () => {
       <StatusBar barStyle={"light-content"} />
       <ImageBackground
         source={{ uri: mealDetail.strMealThumb }}
-        className="w-full h-[37%] bg-cover rounded-b-[30px] pt-10 px-6"
+        className="w-full h-[37%] bg-cover rounded-b-[30px] p-6"
         resizeMode="cover"
         imageStyle={{ borderBottomLeftRadius: 30, borderBottomRightRadius: 30 }}
       >
-        <SafeAreaView className="flex-row justify-between">
+        <SafeAreaView
+          className="flex-row justify-between"
+          style={{ paddingTop: 20 }}
+        >
           <TouchableOpacity
             activeOpacity={0.7}
             onPress={() => navigation.goBack()}

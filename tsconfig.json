@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "jsx": "react-native",       // 👈 This is the key part
+    "jsx": "react-native",      
     "lib": ["dom", "esnext"],
     "allowJs": true,
     "noEmit": true,
@@ -14,5 +14,5 @@
     "skipLibCheck": true
   },
   "exclude": ["node_modules"],
-  "extends": "expo/tsconfig.base" // 👈 if you're using Expo
+  "extends": "expo/tsconfig.base" 
 }

@@ -17,7 +17,7 @@ const CategoryCard = ({ name, price, image }: CardProps) => {
     >
       <View
         style={{
-          width: 120,
+          width: "100%",
           backgroundColor: "white",
           borderRadius: 16,
           padding: 10,
@@ -29,9 +29,9 @@ const CategoryCard = ({ name, price, image }: CardProps) => {
         }}
       >
         <Image
-          source={{ uri: image }}
+          source={require("../assets/amirali-mirhashemian-sc5sTPMrVfk-unsplash.jpg")}
           style={{ width: "100%", height: 80, borderRadius: 12 }}
-          resizeMode="contain"
+          resizeMode="cover"
         />
         <Text
           style={{
@@ -44,27 +44,24 @@ const CategoryCard = ({ name, price, image }: CardProps) => {
         >
           {name}
         </Text>
-        <View
+        <Text
           style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
-            marginTop: 4,
+            fontSize: 12,
+            color: "#646982",
+            fontFamily: "Sen-Regular",
           }}
         >
-          <Text
-            style={{
-              fontSize: 12,
-              color: "#646982",
-              fontFamily: "Sen-Regular",
-            }}
-          >
-            Startinggg
-          </Text>
+          Startinggg
+        </Text>
+        <View className="flex-row justify-between mt-2 items-center">
           <Text
             style={{ fontSize: 14, color: "#32343E", fontFamily: "Sen-Bold" }}
           >
             ${price}
           </Text>
+          <View className="bg-[#F58D1D] w-6 h-6 items-center justify-center rounded-full">
+            <Image source={require("../assets/Plus.png")} />
+          </View>
         </View>
       </View>
     </Pressable>
